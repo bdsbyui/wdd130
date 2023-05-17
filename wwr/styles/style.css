@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Space+Grotesk&display=swap');
+
 :root {
     --page-background-color: #f8f9fd;
     --section-background-color: #a4a6bf;
@@ -5,23 +7,34 @@
     --primary-foreground-color: #282b5b;
     --hover-foreground-color: #f8f9fd;
     --accent-color: #59285c;
+    --heading-font: "DynaPuff", sans-serif;
+    --paragraph-font: "Space Grotesk", sans-serif;
 }
 
 /* Selectors by Element */
 body {
     background-color: var(--page-background-color);
     color: var(--primary-foreground-color);
+    font-family: var(--heading-font);
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 header {
     background-color: var(--section-background-color);
+    font-family: var(--paragraph-font);
 }
 nav a {
     text-align: center;
     text-decoration: none;
+    padding: 35px;
 }
 nav a:hover {
     background-color: var(--hover-background-color);
     color: var(--hover-foreground-color);
+}
+h2 {
+    margin: 0;
 }
 h4 {
     color: var(--primary-foreground-color); /* duplicative */
@@ -29,11 +42,20 @@ h4 {
 main section {
     text-align: center;
 }
+main section img {
+    box-sizing: border-box;
+}
+main p {
+    font-family: var(--paragraph-font);
+}
 footer {
     background-color: var(--section-background-color);
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer p {
     font-size: 1.2em;
+    font-family: var(--paragraph-font);
 }
 footer p a:hover {
     text-decoration: underline;
@@ -47,6 +69,9 @@ footer a:hover {
 }
 
 /* Selectors by ID */
+#logo_link {
+    padding-top: 5px;
+}
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -67,25 +92,44 @@ footer a:hover {
     text-align: center;
 }
 .home-title {
-    color: var(--primary-foreground-color); /* duplicative */
+    font-size: 2em;
+    margin-top: 10px;
 }
 .book, .join {
     background-color: var(--accent-color);
     color: var(--hover-foreground-color);
     text-decoration: none;
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover, .join:hover {
     background-color: var(--hover-background-color);
 }
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+.card-img {
+    border: 10px solid var(--accent-color);
+}
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 .msg {
     background-color: var(--section-background-color);
+    line-height: 1.5em;
+    padding: 35px;
 }
 .msg h2 {
     color: var(--primary-foreground-color); /* duplicative */
 }
 .msg p {
-    color: var(--primary-foreground-color); /* duplicative */
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+.social img {
+    padding-top: 15px;
 }
