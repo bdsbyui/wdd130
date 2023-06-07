@@ -1,0 +1,59 @@
+Notes for personal site
+
+home
+    header
+        logo
+        links
+            Calendar
+            Family History
+            Games
+            Recipies
+            Contact
+    main
+        hero
+        heading
+            Welcome Family, to YOUR website!
+        paragraph
+            Let's count 'em:
+                1. Bryant img link
+                2. Vanessa img link
+                3. Jacob img link
+            ever4. Celeste img link
+                5. Hannah img link
+                6. Aaron img link
+                7. Timothy img link
+    footer
+        Last updated: d mmmm yyyy
+
+Calendar
+    header
+    main
+        selector boxes B V C A T
+        Summer Itinerary
+            24 Jun 0545 MNL 24 Jun 0805 TPE BR262 VAT
+            24 Jun 0950 TPE 24 Jun 0645 SFO UA872 VAT
+            24 Jun 1956 SFO 24 Jun 2159 PHX UA683 VAT
+            01 Jul 2225 MNL 02 Jul 0425 GUM UA184 H
+            02 Jul 0655 GUM 01 Jul 1815 HNL UA200 H
+            01 Jul 2300 HNL 02 Jul 0722 LAX UA1251 H
+            02 Jul 0815 LAX 02 Jul 0953 PHX UA4728 H
+            06 Jul 2356 PHX 07 Jul 0722 IAD UA2487 VHAT
+            07 Jul 0815 IAD 07 Jul 0941 ROC UA4877 VHAT
+            12 Jul 0910 MNL 12 Jul 1450 NRT NH820 B
+            12 Jul 1700 NRT 12 Jul 1640 EWR UA78 B
+            12 Jul 1424 PHX 12 Jul 1959 ORD UA1253 C+
+            12 Jul 2157 EWR 12 Jul 2317 ROC UA1331 B
+            12 Jul 2132 ORD 13 Jul 0016 ROC UA2011 C+
+            14 Jul 1027 ROC 14 Jul 1145 IAD UA4882 BVC+HAT
+            17 Jul 1728 IAD 17 Jul 1916 PHX UA1938 BVC+AT
+            20 Jul 2359 PHX 21 Jul 0534 ORD UA2484 BV
+            21 Jul 0710 ORD 21 Jul 0948 TYS UA5666 BV
+            24 Jul 1023 TYS 21 Jul 1117 ORD UA5300 BV
+            24 Jul 1323 ORD 21 Jul 1514 PHX UA1944 BV
+            26 Jul 1728 IAD 26 Jul 1916 PHX UA1938 H
+            01 Aug 0703 PHX 01 Aug 0905 SFO UA2166 BVAT
+            01 Aug 1200 SFO 02 Aug 1445 NRT UA837 BVAT
+            02 Aug 1715 NRT 02 Aug 2055 MNL NH819 BVAT
+    footer
+
+Family History
