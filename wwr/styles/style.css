@@ -84,10 +84,6 @@ footer a:hover {
     justify-self: center;
     align-self: center;
 }
-#content {
-    max-width: 1600px;
-    margin: 0 auto;
-}
 #hero {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -118,6 +114,14 @@ footer a:hover {
 }
 
 /* Selectors by Class */
+.content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.active {
+    background-color: var(--accent-color);
+    color: var(--hover-foreground-color)
+}
 .logo {
     width: 150px;
 }
@@ -199,6 +203,38 @@ footer a:hover {
     padding-top: 15px;
 }
 
+/* Page 2 */
+.rivers-header {
+    padding: 1%;
+    margin: 0 auto;
+}
+.river-cards {
+    padding: 1%;
+    margin: 0 auto;
+    min-height: 300px;
+}
+
+.river-cards h2 {
+    background-color: var(--section-background-color);
+    margin-bottom: 10px;
+    text-align: left;
+}
+.river-img {
+    width: 30%;
+    max-height: 250px;
+    float: left;
+    margin: 15px 10px 10px 0;
+    border: 2px solid var(--accent-color);
+}
+.river-cards p {
+    /* margin: auto; */
+    text-align: left;
+    text-indent: 5%;
+    font-size: 0.8em;
+}
+
+
+/* Media Queries */
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
