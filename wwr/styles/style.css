@@ -203,7 +203,7 @@ footer a:hover {
     padding-top: 15px;
 }
 
-/* Page 2 */
+/* Page 2 - Rivers */
 .rivers-header {
     padding: 1%;
     margin: 0 auto;
@@ -233,6 +233,88 @@ footer a:hover {
     font-size: 0.8em;
 }
 
+/* Contact Us */
+form {
+    /* Center the form on the page */
+    margin: 50px auto;
+    width: 450px;
+    /* Form outline */
+    padding: 1em;
+    border: 2px solid var(--accent-color);
+    border-radius: 1em;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+  }
+  
+  input,
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
+  
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+  
+    /* Match form field borders */
+    border: 1px solid var(--accent-color);
+  }
+  
+  input:focus,
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: var(--hover-background-color);
+  }
+  
+  textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+  
+    /* Provide space to type some text */
+    height: 5em;
+  }
+  
+  .button {
+    /* Align buttons with the text fields */
+    padding-left: 100px; /* same size as the label elements */
+  }
+  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: 0.5em;
+    background-color: var(--accent-color);
+    color: var(--hover-foreground-color);
+  }
+  #feedback {
+    background-color: var(--hover-background-color);
+    color: var(--hover-foreground-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    /* make this element invisible until we are ready for it */
+    display: none;      
+}
+.moveDown {
+    margin-top: 3em;
+}
 
 /* Media Queries */
 @media screen and (max-width: 900px) {
