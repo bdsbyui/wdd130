@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7S4E | Games</title>
+    <link rel="stylesheet" href="#">
+    <script src="#" defer></script>
   </head>
   <body>
     <header>
-      <a id="logo_link" href="index.html">
-        <img id="logo" src="images/logo.png" alt="7s4e.org">
+      <a class="logo_link" href="index.html">
+        <img class="logo" src="images/logo.png" alt="7s4e.org">
       </a>
       <nav>
         <a href="index.html">Home</a>
@@ -20,9 +22,50 @@
       </nav>
     </header>
     <main>
+      <img id="wordle-background" src="images/wordle.jpg" alt="word game">
+      <div id="wordle-wrapper">
+        <h1>Wordle</h1>
+        <section id="game-rows"></section>
+        <section id="keyboard">
+          <div class="rows">
+            <div id="q">Q</div>
+            <div id="w">W</div>
+            <div id="e">E</div>
+            <div id="r">R</div>
+            <div id="t">T</div>
+            <div id="y">Y</div>
+            <div id="u">U</div>
+            <div id="i">I</div>
+            <div id="o">O</div>
+            <div id="p">P</div>
+          </div>
+          <div class="rows">
+            <div id="a">A</div>
+            <div id="s">S</div>
+            <div id="d">D</div>
+            <div id="f">F</div>
+            <div id="g">G</div>
+            <div id="h">H</div>
+            <div id="j">J</div>
+            <div id="k">K</div>
+            <div id="l">L</div>
+          </div>
+          <div class="rows">
+            <div id="backspace" class="keys">&larr;</div>
+            <div id="z">Z</div>
+            <div id="x">X</div>
+            <div id="c">C</div>
+            <div id="v">V</div>
+            <div id="b">B</div>
+            <div id="n">N</div>
+            <div id="m">M</div>
+            <div id="return" class="keys">&crarr;</div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer>
-        <div id="updated">Last updated ...</div>
+        <div class="updated">Last updated ...</div>
     </footer>
   </body>
 </html>

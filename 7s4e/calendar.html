@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7S4E | Summer 2023</title>
+    <link rel="stylesheet" href="#">
+    <script src="#" defer></script>
   </head>
   <body>
     <header>
-      <a id="logo_link" href="index.html">
-        <img id="logo" src="images/logo.png" alt="7s4e.org">
+      <a class="logo_link" href="index.html">
+        <img class="logo" src="images/logo.png" alt="7s4e.org">
       </a>
       <nav>
         <a href="index.html">Home</a>
@@ -20,9 +22,29 @@
       </nav>
     </header>
     <main>
+      <h1 class="title">Summer 2023 Itineraries</h1>
+      <div id="itinerary-box">
+        <img id="itinerary-background" src="images/united.jpg" alt="airplane image">
+        <fieldset>
+          <legend>Travelers:</legend>
+          <input type="checkbox" id="bryant">
+          <label for="bryant"> Bryant</label>
+          <input type="checkbox" id="vanessa">
+          <label for="vanessa"> Vanessa</label>
+          <input type="checkbox" id="celeste">
+          <label for="celeste"> Celeste</label>
+          <input type="checkbox" id="hannah">
+          <label for="hannah"> Hannah</label>
+          <input type="checkbox" id="aaron">
+          <label for="aaron"> Aaron</label>
+          <input type="checkbox" id="timothy">
+          <label for="timothy"> Timothy</label>
+        </fieldset>
+        <div id="itinerary-display"></div>
+      </div>
     </main>
     <footer>
-        <div id="updated">Last updated ...</div>
+        <div class="updated">Last updated ...</div>
     </footer>
   </body>
 </html>
