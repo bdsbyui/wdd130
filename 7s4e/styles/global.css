@@ -1,0 +1,72 @@
+/* Document
+ * ----------------------------------------------------------------------------
+ */
+:root {
+    /* Color */
+    --ltblu: #76abdf; /* ruddy blue */
+    --dkblu: #24468f; /* Marian blue */
+    --rdacc: #db7763; /* burnt sienna */
+    --dkgrn: #6c8f2b; /* avacado */
+    --ltgrn: #a2db37; /* yellow green */
+
+    /* Layout */
+    --maxwdth: 500px;
+}
+body {
+    background-color: var(--ltblu);
+}
+.content-wrapper {
+    max-width: var(--maxwdth);
+    margin: 0 auto;
+}
+
+/* Header & Footer
+ * ----------------------------------------------------------------------------
+*/
+/* Layout */
+header { /* header bar, excluding header content */
+    background-image: linear-gradient(to right, var(--ltblu), var(--dkgrn));
+}
+.header {
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+.header img {
+    grid-column: 1/2;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    height: 42px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    display: flex;
+    align-self: center;
+    height: 84%;
+    box-sizing: border-box;
+    padding: 2px;
+    text-decoration: none;
+}
+nav a span {
+    align-self: center;
+}
+nav a.active {
+    background-color: var(--rdacc);
+    color: var(--dkblu);
+    font-weight: bold;
+}
+nav a:visited {
+    color: var(--dkblu);    
+}
+nav a:hover {
+    background-color: var(--ltgrn);
+    color: var(--dkgrn);
+    font-weight: bold;
+}
+nav a.inactive {
+    font-style: italic;
+    pointer-events: none;
+}
