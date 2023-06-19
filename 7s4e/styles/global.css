@@ -3,17 +3,18 @@
  */
 :root {
     /* Color */
-    --ltblu: #76abdf; /* ruddy blue */
-    --dkblu: #24468f; /* Marian blue */
-    --rdacc: #db7763; /* burnt sienna */
-    --dkgrn: #6c8f2b; /* avacado */
-    --ltgrn: #a2db37; /* yellow green */
+    --background: #76abdf; /* ruddy blue */
+    --primary: #24468f; /* Marian blue */
+    --secondary: #6c8f2b; /* avacado */
+    --tertiary: #db7763; /* burnt sienna */
+    --accent: #a2db37; /* yellow green */
 
     /* Layout */
-    --maxwdth: 500px;
+    --maxwdth: 850px;
 }
 body {
-    background-color: var(--ltblu);
+    background-color: var(--background);
+    columns: black;
 }
 .content-wrapper {
     max-width: var(--maxwdth);
@@ -23,13 +24,12 @@ body {
 /* Header & Footer
  * ----------------------------------------------------------------------------
 */
-/* Layout */
-header { /* header bar, excluding header content */
-    background-image: linear-gradient(to right, var(--ltblu), var(--dkgrn));
+header, footer{ /* header bar, excluding header content */
+    background-image: linear-gradient(to right, var(--background), var(--secondary));
 }
 .header {
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 50px 1fr 3fr;
 }
 .header img {
     grid-column: 1/2;
@@ -39,6 +39,7 @@ header { /* header bar, excluding header content */
     height: 42px;
 }
 nav {
+    grid-column: 3/4;
     display: flex;
     justify-content: space-around;
 }
@@ -49,24 +50,102 @@ nav a {
     box-sizing: border-box;
     padding: 2px;
     text-decoration: none;
+    background: linear-gradient(var(--accent) 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    transition: 0.5s, background-position 0s;
+    /* https://css-tricks.com/cool-hover-effects-using-background-properties/ */
 }
 nav a span {
     align-self: center;
 }
 nav a.active {
-    background-color: var(--rdacc);
-    color: var(--dkblu);
+    background-color: var(--tertiary);
     font-weight: bold;
 }
 nav a:visited {
-    color: var(--dkblu);    
+    color: black
 }
 nav a:hover {
-    background-color: var(--ltgrn);
-    color: var(--dkgrn);
-    font-weight: bold;
+    background-color: var(--accent);
+    --p: 100%;
 }
 nav a.inactive {
     font-style: italic;
     pointer-events: none;
+}
+.updated {
+    text-align: right;
+}
+
+/* Images
+ * ----------------------------------------------------------------------------
+*/
+.banner {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+}
+.portrait {
+    width: 40%;
+    float: right;
+}
+
+/* Text
+ * ----------------------------------------------------------------------------
+*/
+.title {
+    color: var(--primary);
+    text-align: center;
+}
+.title span {
+    font-style: italic;
+}
+p span {
+    font-style: italic;
+    font-weight: bold;
+}
+.logo-bullets {
+    list-style: none;
+    padding-left: 5px;
+}
+.logo-bullets li {
+    position: relative;
+    padding-left: 20px;
+}
+.logo-bullets li::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-image: url(../images/logoBlack.png);
+    background-size: cover;
+    background-position: center;
+    left: 0;
+}
+
+/* Media Queries
+ * ----------------------------------------------------------------------------
+*/
+@media screen and (max-width: 400px) {
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto;
+    }
+    .header img {
+        grid-row: 1/2;
+    }
+    nav {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    nav a {
+        padding: 0 100px;
+    }
+    nav a span {
+        display: block;
+        margin: 0 auto;
+    }
 }
