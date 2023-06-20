@@ -1,0 +1,7 @@
+.itinerary-grid {
+    display: grid;
+    grid-template-rows: 59% 41%;
+}
+.background {
+    grid-row: 1/3;
+}

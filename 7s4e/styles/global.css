@@ -8,16 +8,19 @@
     --secondary: #6c8f2b; /* avacado */
     --tertiary: #db7763; /* burnt sienna */
     --accent: #a2db37; /* yellow green */
+    --dark-text: black;
+    --light-text: white;
 
     /* Layout */
-    --maxwdth: 850px;
+    --max-width: 850px;
+    --min-width: 400px;
 }
 body {
     background-color: var(--background);
-    columns: black;
+    color: var(--dark-text);
 }
 .content-wrapper {
-    max-width: var(--maxwdth);
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -62,7 +65,7 @@ nav a.active {
     font-weight: bold;
 }
 nav a:visited {
-    color: black
+    color: var(--dark-text);
 }
 nav a:hover {
     background-color: var(--accent);
@@ -88,6 +91,9 @@ nav a.inactive {
 .portrait {
     width: 40%;
     float: right;
+}
+.background {
+    width: 100%;
 }
 
 /* Text
@@ -126,7 +132,7 @@ p span {
 /* Media Queries
  * ----------------------------------------------------------------------------
 */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) { /* Why not var(--min-width) here? */
 
     .header {
         grid-template-columns: 1fr;
