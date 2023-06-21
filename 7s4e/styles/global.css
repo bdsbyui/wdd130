@@ -64,12 +64,21 @@ nav a.active {
     background-color: var(--tertiary);
     font-weight: bold;
 }
+nav a:link {
+    color: var(--primary);
+}
 nav a:visited {
     color: var(--dark-text);
+}
+nav a:focus {
+    border: 5px solid var(--accent);
 }
 nav a:hover {
     background-color: var(--accent);
     --p: 100%;
+}
+nav a:active {
+    background-color: var(--secondary);
 }
 nav a.inactive {
     font-style: italic;
@@ -91,6 +100,8 @@ nav a.inactive {
 .portrait {
     width: 40%;
     float: right;
+    margin: 3px;
+    border: 2px solid var(--secondary);
 }
 .background {
     width: 100%;

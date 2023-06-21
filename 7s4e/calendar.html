@@ -34,28 +34,70 @@
       <h1 class="title">Summer 2023 Itineraries</h1>
       <div class="itinerary-grid">
         <img class="background" src="images/united.jpg" alt="airplane image">
-        <fieldset>
+        <div class="itinerary-display">
+          <h2><pre>DEPART ARRIVE VIA</pre></h2>
+          <div id="itinerary">
+            <pre>24 Jun 0545 MNL 24 Jun 0805 TPE BR262 </pre>
+            <pre>24 Jun 0950 TPE 24 Jun 0645 SFO UA872 </pre>
+            <pre>24 Jun 1956 SFO 24 Jun 2159 PHX UA683 </pre>
+            <pre>01 Jul 2225 MNL 02 Jul 0425 GUM UA184 </pre>
+            <pre>02 Jul 0655 GUM 01 Jul 1815 HNL UA200 </pre>
+            <pre>01 Jul 2300 HNL 02 Jul 0722 LAX UA1251</pre>
+            <pre>02 Jul 0815 LAX 02 Jul 0953 PHX UA4728</pre>
+            <pre>06 Jul 2356 PHX 07 Jul 0722 IAD UA2487</pre>
+            <pre>07 Jul 0815 IAD 07 Jul 0941 ROC UA4877</pre>
+            <pre>12 Jul 0910 MNL 12 Jul 1450 NRT NH820 </pre>
+            <pre>12 Jul 1700 NRT 12 Jul 1640 EWR UA78  </pre>
+            <pre>12 Jul 1424 PHX 12 Jul 1959 ORD UA1253</pre>
+            <pre>12 Jul 2157 EWR 12 Jul 2317 ROC UA1331</pre>
+            <pre>12 Jul 2132 ORD 13 Jul 0016 ROC UA2011</pre>
+            <pre>14 Jul 1027 ROC 14 Jul 1145 IAD UA4882</pre>
+            <pre>17 Jul 1728 IAD 17 Jul 1916 PHX UA1938</pre>
+            <pre>20 Jul 2359 PHX 21 Jul 0534 ORD UA2484</pre>
+            <pre>21 Jul 0710 ORD 21 Jul 0948 TYS UA5666</pre>
+            <pre>24 Jul 1023 TYS 21 Jul 1117 ORD UA5300</pre>
+            <pre>24 Jul 1323 ORD 21 Jul 1514 PHX UA1944</pre>
+            <pre>26 Jul 1728 IAD 26 Jul 1916 PHX UA1938</pre>
+            <pre>01 Aug 0703 PHX 01 Aug 0905 SFO UA2166</pre>
+            <pre>01 Aug 1200 SFO 02 Aug 1445 NRT UA837 </pre>
+            <pre>02 Aug 1715 NRT 02 Aug 2055 MNL NH819 </pre>
+          </div>
+        </div>
+        <fieldset class="travelers">
           <legend>Travelers:</legend>
-          <input type="checkbox" id="select-all">
-          <label for="select-all"> Bryant</label>
-          <input type="checkbox" id="bryant">
-          <label for="bryant"> Bryant</label>
-          <input type="checkbox" id="vanessa">
-          <label for="vanessa"> Vanessa</label>
-          <input type="checkbox" id="celeste">
-          <label for="celeste"> Celeste</label>
-          <input type="checkbox" id="hannah">
-          <label for="hannah"> Hannah</label>
-          <input type="checkbox" id="aaron">
-          <label for="aaron"> Aaron</label>
-          <input type="checkbox" id="timothy">
-          <label for="timothy"> Timothy</label>
+          <div class="select-all">
+            <input type="checkbox" id="select-all">
+            <label for="select-all"> Select All</label>
+          </div>
+          <div class="bryant">
+            <input type="checkbox" id="bryant">
+            <label for="bryant"> Bryant</label>
+          </div>
+          <div class="vanessa">
+            <input type="checkbox" id="vanessa">
+            <label for="vanessa"> Vanessa</label>
+          </div>
+          <div class="celeste">
+            <input type="checkbox" id="celeste">
+            <label for="celeste"> Celeste</label>
+          </div>
+          <div class="hannah">
+            <input type="checkbox" id="hannah">
+            <label for="hannah"> Hannah</label>
+          </div>
+          <div class="aaron">
+            <input type="checkbox" id="aaron">
+            <label for="aaron"> Aaron</label>
+          </div>
+          <div class="timothy">
+            <input type="checkbox" id="timothy">
+            <label for="timothy"> Timothy</label>
+          </div>
         </fieldset>
-        <div id="itinerary-display"></div>
       </div>
     </main>
     <footer>
-      <div class="width-wrapper">
+      <div class="content-wrapper">
         <div class="updated">Page last updated on 20 June 2023.</div>
       </div>
     </footer>
