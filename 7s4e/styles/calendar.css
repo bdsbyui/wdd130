@@ -1,55 +1,121 @@
+/* Local styles for 7s4e.org/calendar, last updated 24 July 2023.
+
+    Table of Contents                                                    Line #
+    ---------------------------------------------------------------------------
+    Custom properties ...................................................   16
+    Primary grid ........................................................   27
+
+    Grid Components
+        Itinerary table .................................................   75
+        
+        Forms ...........................................................   92
+            Destinations form grid ......................................  100
+            Travelers form grid .........................................  111
+ */
+
+/* Custom Properties */
+:root {
+    /* Primary Grid Layout Dimensions */
+    --x-destinations: 18;
+    --x-margin: 5;
+    --x-travelers: 72;
+    --y-form-half: 12;
+    --y-gap: 14;
+    --y-itinerary: 62; 
+}
+
+/* Primary Grid */
 .itinerary-grid {
     display: grid;
-    grid-template-columns: 1fr 18fr 1fr;
-    grid-template-rows: 59% 28% 12%;
+    grid-template-columns:
+        calc(1% * var(--x-margin))
+        calc(1% * var(--x-destinations))
+        calc(1% * var(--x-travelers))
+        calc(1% * var(--x-margin));
+    grid-template-rows:
+        calc(1% * var(--y-itinerary))
+        calc(1% * var(--y-gap))
+        calc(1% * var(--y-form-half))
+        calc(1% * var(--y-form-half));
     margin-bottom: 20px;
 }
 .background {
-    grid-column: 1/4;
-    grid-row: 1/4;
+    grid-column: 1/5;
+    grid-row: 1/5;
 }
+.itinerary-display-container {
+    grid-column: 2/4;
+    grid-row-start: 1;
+    padding-bottom: calc(
+        100% * var(--y-itinerary) /
+            calc(var(--x-destinations) + var(--x-travelers))
+    );
+}
+.destinations-container {
+    grid-column-start: 2;
+    grid-row: 3/5;
+    padding-right: calc(
+        100% * var(--x-destinations) / calc(2 * var(--y-form-half))
+    );
+}
+.travelers-container {
+    grid-column: 3/4;
+    grid-row-end: 5;
+    padding-top: calc(100% * var(--y-form-half) / var(--x-travelers));
+}
+.itinerary-display-container, .destinations-container, .travelers-container {
+    position: relative;
+}
+.itinerary-display, .destinations, .travelers {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: auto;  
+}
+
+/* Itinerary Table */
 .itinerary-display {
-    grid-column: 2/3;
-    grid-row: 1/2;
     color: var(--light-text);
     text-align: center;
 }
+table {width: 100%;}
+tr:nth-child(2n + 3) {
+    background-color: var(--light-text);
+    color: var(--primary);
+}
+th {
+    font-weight: bold;
+    border-bottom: 3px double var(--light-text);
+}
+th > pre {margin-bottom: 0;}
+td > pre {margin: 0;}
+
+/* Forms */
+fieldset {
+    border-color: var(--tertiary);
+    font-size: min(1rem, 1.88vw);
+}
+.destinations-container, .travelers-container {margin-bottom: 13px;}
+.destinations, .travelers {display: grid;}
+
+/* Destinations Form Grid */
+.destinations {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+.all-places, .phx, .roc, .tys {grid-column: 1/2;}
+.all-places {grid-row: 1/2;}
+.phx {grid-row: 2/3;}
+.roc {grid-row: 3/4;}
+.tys {grid-row: 4/5;}
+
+/* Travelers Form Grid */
 .travelers {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
 }
-.select-all {
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-.bryant {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-.vanessa {
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-.celeste {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-.hannah {
-    grid-column: 3/4;
-    grid-row: 2/3;
-}
-.aaron {
-    grid-column: 4/5;
-    grid-row: 1/2;
-}
-.timothy {
-    grid-column: 4/5;
-    grid-row: 2/3;
-}
-#itinerary {
-    text-align: center;
-    line-height: 0.5;
-}
+.all-people {grid-column: 1/2;}
+.all-people, .bryant, .celeste, .aaron {grid-row: 1/2;}
+.vanessa, .hannah, .timothy {grid-row: 2/3;}
+.bryant, .vanessa {grid-column: 2/3;}
+.celeste, .hannah {grid-column: 3/4;}
+.aaron, .timothy {grid-column: 4/5;}
