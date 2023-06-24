@@ -1,9 +1,9 @@
 <!-- Games page for 7s4e.org
-  Home -> Games
-  Wordle
--->
+      Home -> Games
+      Wordle
+ -->
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="styles/games.css">
     <script src="scripts/games.js" defer></script>
   </head>
+
   <body>
+    <img class="background" src="images/wordle.jpg" alt="word game">
     <header>
       <div class="content-wrapper header">
         <a href="index.html">
@@ -29,10 +31,9 @@
         </nav>
       </div>
     </header>
-
+        
     <main>
-      <img id="wordle-background" src="images/wordle.jpg" alt="word game">
-      <div id="wordle-wrapper">
+      <div id="wrapper">
         <h1>Wordle</h1>
         <section id="game-rows"></section>
         <section id="keyboard">
@@ -74,9 +75,55 @@
       </div>
     </main>
     <footer>
-      <div class="width-wrapper">
-        <div class="updated">Page last updated on 19 June 2023.</div>
+      <div class="content-wrapper">
+        <div class="updated">Page last updated on 24 June 2023.</div>
       </div>
     </footer>
   </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<body>
+    <main id="wrapper" class="wrapper">
+        <h1>Wordle</h1>
+        <section id="game-rows"></section>
+        <section id="keyboard">
+            <div class="rows">
+                <div id="q">Q</div>
+                <div id="w">W</div>
+                <div id="e">E</div>
+                <div id="r">R</div>
+                <div id="t">T</div>
+                <div id="y">Y</div>
+                <div id="u">U</div>
+                <div id="i">I</div>
+                <div id="o">O</div>
+                <div id="p">P</div>
+            </div>
+            <div class="rows">
+                <div id="a">A</div>
+                <div id="s">S</div>
+                <div id="d">D</div>
+                <div id="f">F</div>
+                <div id="g">G</div>
+                <div id="h">H</div>
+                <div id="j">J</div>
+                <div id="k">K</div>
+                <div id="l">L</div>
+            </div>
+            <div class="rows">
+                <div id="backspace" class="keys">&larr;</div>
+                <div id="z">Z</div>
+                <div id="x">X</div>
+                <div id="c">C</div>
+                <div id="v">V</div>
+                <div id="b">B</div>
+                <div id="n">N</div>
+                <div id="m">M</div>
+                <div id="return" class="keys">&crarr;</div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html> -->

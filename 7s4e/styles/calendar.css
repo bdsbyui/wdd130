@@ -9,8 +9,8 @@
         Itinerary table .................................................   75
         
         Forms ...........................................................   92
-            Destinations form grid ......................................  100
-            Travelers form grid .........................................  111
+            Destinations form grid ......................................  101
+            Travelers form grid .........................................  112
  */
 
 /* Custom Properties */
@@ -92,6 +92,7 @@ td > pre {margin: 0;}
 /* Forms */
 fieldset {
     border-color: var(--tertiary);
+    border-radius: 5px;
     font-size: min(1rem, 1.88vw);
 }
 .destinations-container, .travelers-container {margin-bottom: 13px;}

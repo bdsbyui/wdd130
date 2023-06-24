@@ -11,9 +11,9 @@
     
     Styles by type
         Images ..........................................................  103
-        Text ............................................................  118
+        Text ............................................................  119
     
-    Media Queries .......................................................  147
+    Media Queries .......................................................  148
  */
 
 /* Custom Properties */
@@ -112,6 +112,7 @@ nav a.inactive { /* pending pages */
     float: right;
     margin: 3px;
     border: 2px solid var(--secondary);
+    border-radius: 5px;
 }
 .background {width: 100%;}
 
