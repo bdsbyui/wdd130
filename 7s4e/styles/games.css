@@ -1,48 +1,55 @@
-/* Local styles for 7s4e.org/games, last updated 24 July 2023.
+/* Local styles for 7s4e.org/games, last updated 28 July 2023.
 
     Table of Contents                                                    Line #
     ---------------------------------------------------------------------------
-    Custom properties ...................................................    x
+    Custom Properties ...................................................   12
+    Background ..........................................................   20
+    Elements by ID ......................................................   30
+    Layout classes ......................................................   41
+    Style classes .......................................................   67
  */
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
+/* Custom Properties */
+:root {
+    /* Game Colors */
+    --miss: #6e7173;
+    --close: #bfa556;
+    --match: #6ca663;
 }
+
+/* Background */
+body {overflow: hidden;}
+body, .header, main {position: relative;}
 .background {
     opacity: 0.1;
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: auto;
 }
-.header, main {
-    position: relative;
-}
-#wordle-wrapper {
+
+/* Elements by ID */
+#game-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     max-width: 500px;
     margin: 50px auto;
     border: 5px ridge var(--tertiary);
     background-color: var(--background);
 }
-#game-rows {
-    margin: 5%;
-}
-.round {
-    padding: 2%;
-}
-.letter {
+#game-rows, #keyboard {margin: 5%;}
+
+/* Layout Classes */
+.round {padding: 2%;}
+.letter, .keys {
     display: inline-block;
     vertical-align: bottom;
     box-sizing: border-box;
-    max-height: 50px;
-    min-height: 50px;
-    max-width: 50px;
-    min-width: 50px;
+}
+.letter {
+    width: 50px; height: 50px;
     margin: 0 1%;
+    border: 1px inset var(--primary);
     border-radius: 5px;
-    border: 1px solid var(--primary);
     padding: 5px;
     font-size: xx-large;
 }
@@ -51,33 +58,17 @@ body {
     padding: 0.5%;
 }
 .keys {
-    display: inline-block;
-    vertical-align: bottom;
-    box-sizing: border-box;
-    border: 1px solid black;
-    background-color: white;
-    height: 25px;
-    width: 25px;
+    width: 25px; height: 25px;
+    border: 1px outset black;
+    background-color: white;    
     padding: 3px
 }
-.unused {
-    background-color: white;
-}
-.used {
-    background-color: #6e7173;
-    color: white;
-}
-.within {
-    background-color: #bfa556;
-    color: white;
-}
-.match {
-    background-color: #6ca663;
-    color: white;
-}
-.win {
-    background-color: gold;
-}
-.lose {
-    background-color: red;
-}
+
+/* Style Classes */
+.unused {background-color: white;}
+.used {background-color: var(--miss);}
+.within {background-color: var(--close);}
+.match {background-color: var(--match);}
+.used, .within, .match {color: white;}
+.win {background-color: var(--secondary) !important;}
+.lose {background-color: var(--tertiary) !important;}
