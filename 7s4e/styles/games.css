@@ -1,4 +1,4 @@
-/* Local styles for 7s4e.org/games, last updated 28 July 2023.
+/* Local styles for 7s4e.org/games, last updated 1 July 2023.
 
     Table of Contents                                                    Line #
     ---------------------------------------------------------------------------
@@ -37,6 +37,14 @@ body, .header, main {position: relative;}
     background-color: var(--background);
 }
 #game-rows, #keyboard {margin: 5%;}
+#no-mobile {
+    /* display: inline-block; */
+    max-width: 500px;
+    margin: 50px auto -50px;
+    /* margin-bottom: -50px; */
+    text-align: right;
+    /* color: var(--tertiary); */
+}
 
 /* Layout Classes */
 .round {padding: 2%;}
