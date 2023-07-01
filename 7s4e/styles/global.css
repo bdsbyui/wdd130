@@ -1,4 +1,4 @@
-/* Global styles for 7s4e.org, last updated 24 July 2023.
+/* Global styles for 7s4e.org, last updated 1 July 2023.
 
     Table of Contents                                                    Line #
     ---------------------------------------------------------------------------
@@ -7,13 +7,13 @@
     Styles by section
         Macro styles ....................................................   35
         Header & footer .................................................   45
-        Navigation bar ..................................................   66
+        Navigation bar ..................................................   73
     
     Styles by type
-        Images ..........................................................  103
-        Text ............................................................  119
+        Images ..........................................................  110
+        Text ............................................................  126
     
-    Media Queries .......................................................  148
+    Media Queries .......................................................  155
  */
 
 /* Custom Properties */
@@ -43,7 +43,7 @@ body {
 }
 
 /* Header & Footer */
-header, footer{ /* header bar, excluding header content */
+header, footer{ /* header and footer bars, excluding header content */
     background-image: linear-gradient(
         to right,
         var(--background),
@@ -61,7 +61,14 @@ header, footer{ /* header bar, excluding header content */
     padding: 4px;
     height: 42px;
 }
-.updated {text-align: right;} /* footer */
+.footer { /* container for footer content */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.site-plan {grid-column: 1/2;}
+.updated {
+    grid-column: 2/3;
+    text-align: right;}
 
 /* Navigation Bar*/
 nav { /* included within .header container */
