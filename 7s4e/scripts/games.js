@@ -1,4 +1,4 @@
-/* Script for 7s4e.org/games, last updated 28 July 2023.
+/* Script for 7s4e.org/games, last updated 28 June 2023.
 
     Table of Contents                                                    Line #
     ---------------------------------------------------------------------------

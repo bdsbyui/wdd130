@@ -36,186 +36,58 @@
       <div class="itinerary-grid">
         <img class="background" src="images/united.jpg" alt="airplane image">
         <div class="itinerary-display-container">
-          <div class="itinerary-display">
-            <table>
-              <tr>
-                <th><pre>DEPART</pre></th>
-                <th><pre>ARRIVE</pre></th>
-                <th><pre>VIA</pre></th>
-              </tr>
-              <tr>
-                <td><pre>24 Jun 0545 MNL</pre></td>
-                <td><pre>24 Jun 0805 TPE</pre></td>
-                <td><pre>BR 262 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>24 Jun 0950 TPE</pre></td>
-                <td><pre>24 Jun 0645 SFO</pre></td>
-                <td><pre>UA 872 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>24 Jun 1956 SFO</pre></td>
-                <td><pre>24 Jun 2159 PHX</pre></td>
-                <td><pre>UA 683 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>01 Jul 2225 MNL</pre></td>
-                <td><pre>02 Jul 0425 GUM</pre></td>
-                <td><pre>UA 184 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>02 Jul 0655 GUM</pre></td>
-                <td><pre>01 Jul 1815 HNL</pre></td>
-                <td><pre>UA 200 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>01 Jul 2300 HNL</pre></td>
-                <td><pre>02 Jul 0722 LAX</pre></td>
-                <td><pre>UA 1251</pre></td>
-              </tr>
-              <tr>
-                <td><pre>02 Jul 0815 LAX</pre></td>
-                <td><pre>02 Jul 0953 PHX</pre></td>
-                <td><pre>UA 4728</pre></td>
-              </tr>
-              <tr>
-                <td><pre>06 Jul 2356 PHX</pre></td>
-                <td><pre>07 Jul 0722 IAD</pre></td>
-                <td><pre>UA 2487</pre></td>
-              </tr>
-              <tr>
-                <td><pre>07 Jul 0815 IAD</pre></td>
-                <td><pre>07 Jul 0941 ROC</pre></td>
-                <td><pre>UA 4877</pre></td>
-              </tr>
-              <tr>
-                <td><pre>12 Jul 0910 MNL</pre></td>
-                <td><pre>12 Jul 1450 NRT</pre></td>
-                <td><pre>NH 820 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>12 Jul 1700 NRT</pre></td>
-                <td><pre>12 Jul 1640 EWR</pre></td>
-                <td><pre>UA 78  </pre></td>
-              </tr>
-              <tr>
-                <td><pre>12 Jul 1424 PHX</pre></td>
-                <td><pre>12 Jul 1959 ORD</pre></td>
-                <td><pre>UA 1253</pre></td>
-              </tr>
-              <tr>
-                <td><pre>12 Jul 2157 EWR</pre></td>
-                <td><pre>12 Jul 2317 ROC</pre></td>
-                <td><pre>UA 1331</pre></td>
-              </tr>
-              <tr>
-                <td><pre>12 Jul 2132 ORD</pre></td>
-                <td><pre>13 Jul 0016 ROC</pre></td>
-                <td><pre>UA 2011</pre></td>
-              </tr>
-              <tr>
-                <td><pre>14 Jul 1027 ROC</pre></td>
-                <td><pre>14 Jul 1145 IAD</pre></td>
-                <td><pre>UA 4882</pre></td>
-              </tr>
-              <tr>
-                <td><pre>17 Jul 1728 IAD</pre></td>
-                <td><pre>17 Jul 1916 PHX</pre></td>
-                <td><pre>UA 1938</pre></td>
-              </tr>
-              <tr>
-                <td><pre>20 Jul 2359 PHX</pre></td>
-                <td><pre>21 Jul 0534 ORD</pre></td>
-                <td><pre>UA 2484</pre></td>
-              </tr>
-              <tr>
-                <td><pre>21 Jul 0710 ORD</pre></td>
-                <td><pre>21 Jul 0948 TYS</pre></td>
-                <td><pre>UA 5666</pre></td>
-              </tr>
-              <tr>
-                <td><pre>24 Jul 1023 TYS</pre></td>
-                <td><pre>21 Jul 1117 ORD</pre></td>
-                <td><pre>UA 5300</pre></td>
-              </tr>
-              <tr>
-                <td><pre>24 Jul 1323 ORD</pre></td>
-                <td><pre>21 Jul 1514 PHX</pre></td>
-                <td><pre>UA 1944</pre></td>
-              </tr>
-              <tr>
-                <td><pre>26 Jul 1728 IAD</pre></td>
-                <td><pre>26 Jul 1916 PHX</pre></td>
-                <td><pre>UA 1938</pre></td>
-              </tr>
-              <tr>
-                <td><pre>01 Aug 0703 PHX</pre></td>
-                <td><pre>01 Aug 0905 SFO</pre></td>
-                <td><pre>UA 2166</pre></td>
-              </tr>
-              <tr>
-                <td><pre>01 Aug 1200 SFO</pre></td>
-                <td><pre>02 Aug 1445 NRT</pre></td>
-                <td><pre>UA 837 </pre></td>
-              </tr>
-              <tr>
-                <td><pre>02 Aug 1715 NRT</pre></td>
-                <td><pre>02 Aug 2055 MNL</pre></td>
-                <td><pre>NH 819 </pre></td>
-              </tr>
-            </table>
-          </div>
+          <div class="itinerary-display"><table id="table"></table></div>
         </div>
         <div class="destinations-container">
-          <fieldset class="destinations">
+          <fieldset id="destinations" class="destinations"><!--id new, change css-->
             <legend>Destinations:</legend>
             <div class="all-places">
-              <input type="checkbox" id="all-places">
+              <input type="checkbox" id="all-places" class="all" checked>
               <label for="all-places"> Select All</label>
             </div>
             <div class="phx">
-              <input type="checkbox" id="phx">
+              <input type="checkbox" id="phx" class="one" checked>
               <label for="phx"> Phoenix</label>
             </div>
             <div class="roc">
-              <input type="checkbox" id="roc">
+              <input type="checkbox" id="roc" class="one" checked>
               <label for="roc"> Rochester</label>
             </div>
             <div class="tys">
-              <input type="checkbox" id="tys">
+              <input type="checkbox" id="tys" class="one" checked>
               <label for="tys"> Knoxville</label>
             </div>
           </fieldset>
         </div>
         <div class="travelers-container">
-          <fieldset class="travelers">
+          <fieldset id="travelers" class="travelers"><!--id new, change css-->
             <legend>Travelers:</legend>
             <div class="all-people">
-              <input type="checkbox" id="all-people">
+              <input type="checkbox" id="all-people" class="all" checked>
               <label for="all-people"> Select All</label>
             </div>
             <div class="bryant">
-              <input type="checkbox" id="bryant">
+              <input type="checkbox" id="bryant" class="one" checked>
               <label for="bryant"> Bryant</label>
             </div>
             <div class="vanessa">
-              <input type="checkbox" id="vanessa">
+              <input type="checkbox" id="vanessa" class="one" checked>
               <label for="vanessa"> Vanessa</label>
             </div>
             <div class="celeste">
-              <input type="checkbox" id="celeste">
+              <input type="checkbox" id="celeste" class="one" checked>
               <label for="celeste"> Celeste</label>
             </div>
             <div class="hannah">
-              <input type="checkbox" id="hannah">
+              <input type="checkbox" id="hannah" class="one" checked>
               <label for="hannah"> Hannah</label>
             </div>
             <div class="aaron">
-              <input type="checkbox" id="aaron">
+              <input type="checkbox" id="aaron" class="one" checked>
               <label for="aaron"> Aaron</label>
             </div>
             <div class="timothy">
-              <input type="checkbox" id="timothy">
+              <input type="checkbox" id="timothy" class="one" checked>
               <label for="timothy"> Timothy</label>
             </div>  
           </fieldset>
