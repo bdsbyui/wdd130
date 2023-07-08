@@ -18,10 +18,14 @@
  */
 
 /* Import */
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&family=Ubuntu:wght@300&display=swap");
 
 /* Custom Properties */
 :root {
+    /* Color */
+    --heading-font: "Passion One", cursive;
+    --paragraph-font: Lato, "Ubuntu", sans-serif;
+
     /* Color */
     --background: #76abdf; /* ruddy blue */
     --primary: #24468f; /* Marian blue */
@@ -40,6 +44,7 @@
 body {
     background-color: var(--background);
     color: var(--dark-text);
+    font-family: var(--paragraph-font);
 }
 .content-wrapper { /* container to constrain width on large viewport */
     max-width: var(--max-width);
@@ -131,6 +136,7 @@ nav a.inactive { /* pending pages */
 .title {
     color: var(--primary);
     text-align: center;
+    font-family: var(--heading-font);
 }
 .title span {font-style: italic;}
 p span {
