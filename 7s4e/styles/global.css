@@ -2,19 +2,23 @@
 
     Table of Contents                                                    Line #
     ---------------------------------------------------------------------------
-    Custom properties ...................................................   19
+    Import ..............................................................   20
+    Custom properties ...................................................   23
 
     Styles by section
-        Macro styles ....................................................   35
-        Header & footer .................................................   45
-        Navigation bar ..................................................   73
+        Macro styles ....................................................   39
+        Header & footer .................................................   49
+        Navigation bar ..................................................   77
     
     Styles by type
-        Images ..........................................................  110
-        Text ............................................................  126
+        Images ..........................................................  114
+        Text ............................................................  130
     
-    Media Queries .......................................................  155
+    Media Queries .......................................................  159
  */
+
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Ubuntu:wght@300&display=swap');
 
 /* Custom Properties */
 :root {
@@ -84,10 +88,10 @@ nav a { /* nav anchors */
     padding: 2px;
     text-decoration: none;
     /* https://css-tricks.com/cool-hover-effects-using-background-properties/ */
-    background:
+    /* background:
         linear-gradient(var(--accent) 0 0)
-            var(--p, 0) / var(--p, 0) no-repeat;
-    transition: 0.3s, background-position 0s;
+            var(--p, 0) / var(--p, 0) no-repeat; */
+    /* transition: 0.3s, background-position 0s; */
 }
 nav a span {align-self: center;} /* vertical alignment */
 nav a.active { /* current page */
