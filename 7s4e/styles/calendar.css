@@ -1,16 +1,18 @@
-/* Local styles for 7s4e.org/calendar, last updated 24 July 2023.
+/* Local styles for 7s4e.org/calendar, last updated 8 July 2023.
 
     Table of Contents                                                    Line #
     ---------------------------------------------------------------------------
-    Custom properties ...................................................   16
-    Primary grid ........................................................   27
+    Custom properties ...................................................   18
+    Primary grid ........................................................   29
 
     Grid Components
-        Itinerary table .................................................   75
+        Itinerary table .................................................   77
         
-        Forms ...........................................................   92
-            Destinations form grid ......................................  101
-            Travelers form grid .........................................  112
+        Forms ...........................................................   94
+            Destinations form grid ......................................  103
+            Travelers form grid .........................................  114
+    
+    DOM Elements ........................................................  126
  */
 
 /* Custom Properties */
@@ -120,3 +122,8 @@ fieldset {
 .bryant, .vanessa {grid-column: 2/3;}
 .celeste, .hannah {grid-column: 3/4;}
 .aaron, .timothy {grid-column: 4/5;}
+
+/* DOM Classes */
+.past {
+    text-decoration: line-through;
+}
