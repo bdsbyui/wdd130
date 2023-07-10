@@ -48,12 +48,18 @@
 .itinerary-display-container {
     grid-column: 2/4;
     grid-row-start: 1;
-    padding-bottom: calc(100% * var(--y-itinerary) / calc(var(--x-destinations) + var(--x-travelers)));
+    padding-bottom: calc(
+        100% * var(--y-itinerary) 
+             * pow(var(--x-destinations) + var(--x-travelers), -1)
+    );
 }
 .destinations-container {
     grid-column-start: 2;
     grid-row: 3/5;
-    padding-right: calc(100% * var(--x-destinations) / calc(2 * var(--y-form-half)));
+    padding-right: calc(
+        100% * var(--x-destinations) 
+             * pow(2 * var(--y-form-half), -1)
+    );
 }
 .travelers-container {
     grid-column: 3/4;
